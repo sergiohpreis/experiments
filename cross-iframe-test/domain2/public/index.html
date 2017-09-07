@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste 2</title>
+</head>
+
+<body>
+    <h1>Receiver</h1>
+    <p>
+        Essa janela recebe o dado enviado
+    </p>
+    <div id="message"></div>
+
+    <script>
+        window.onload = function () {
+            var messageEle = document.getElementById('message');
+
+            // Função responsável por inserir a mensagem recebida
+            function receiveMessage(e) {
+                // Verifica se a mensagem veio da origem correta
+                if (e.origin !== "http://localhost:3000")
+                    return;
+
+                // Atualiza a div com a mensagem recebida
+                messageEle.innerHTML = e.data;
+            };
+
+            // Escutando eventos do tipo "message"
+            window.addEventListener('message', receiveMessage);
+        };
+    </script>
+</body>
+
+</html>

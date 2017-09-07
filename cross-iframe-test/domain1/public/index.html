@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste 1</title>
+</head>
+
+<body>
+    <h1>Controlador</h1>
+    <p> Esta página manda os dados para o iframe, basta clicar no botão "Send Message"</p>
+    <p><button id="send">Send Message</button></p>
+
+    <iframe id="receiver" src="http://localhost:3001" width="500" height="200">
+        <p>Navegador não suporta iframes.</p>
+    </iframe>
+    
+    <script>
+        window.onload = function () {
+            var receiver = document.getElementById('receiver').contentWindow;
+            var btn = document.getElementById('send');
+
+            // Função responsável por enviar o dado
+            function sendMessage(e) {
+                e.preventDefault();
+
+                // Envia a mensagem através do método postMessage();
+                receiver.postMessage('Mensagem Enviada', 'http://localhost:3001');
+            };
+
+            btn.addEventListener('click', sendMessage);
+        };
+    </script>
+</body>
+
+</html>
