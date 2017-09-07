@@ -1,0 +1,18 @@
+.input {
+    border-left: 3px solid;
+}
+
+.input__title {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.input__field {
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+}
