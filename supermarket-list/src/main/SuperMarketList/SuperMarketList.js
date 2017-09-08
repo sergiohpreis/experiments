@@ -33,6 +33,7 @@ class SuperMarketList extends Component {
         const regEx = /^\d+$/;
         const value = e.target.value;
 
+        // Validate if value is number 
         if (value === '' || regEx.test(value)) {
             this.setState({
                 qtd: e.target.value
