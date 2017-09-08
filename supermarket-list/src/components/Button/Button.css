@@ -1,4 +1,4 @@
-.icon {
+.button {
     display: inline-block;
     min-width: 70px;
     padding: 10px;
@@ -12,6 +12,6 @@
     cursor: pointer;
 }
 
-.icon + .icon {
+.button + .button {
     margin-left: 20px;
 }
