@@ -1,0 +1,14 @@
+.icon {
+    display: inline-block;
+    min-width: 70px;
+    padding: 10px;
+    background: #333;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: normal;
+    color: #fff;
+    cursor: pointer;
+}
