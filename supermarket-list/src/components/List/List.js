@@ -10,7 +10,6 @@ const List = props => (
             {props.data.map((item, index) => <Item
                 key={index}
                 description={`${item.qtd}x | ${item.description}`}
-                handleAdd={props.handleAdd}
                 handleRemove={props.handleRemove}/>)}
         </ul>
     </div>

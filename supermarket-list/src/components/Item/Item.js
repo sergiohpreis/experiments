@@ -10,7 +10,6 @@ const Item = props => (
             {props.description}
         </h3>
         <div className="item__actions">
-            <Button type="add" text="Add" onClick={props.handleAdd}/>
             <Button type="remove" text="Remove" onClick={props.handleRemove}/>
         </div>
     </div>
