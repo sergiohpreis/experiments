@@ -9,8 +9,9 @@ const List = props => (
         <ul className="list__items">
             {props.data.map((item, index) => <Item
                 key={index}
+                id={item._id}
                 description={`${item.qtd}x | ${item.description}`}
-                handleRemove={props.handleRemove}/>)}
+                handleRemove={() => props.handleRemove(item._id)}/>)}
         </ul>
     </div>
 );

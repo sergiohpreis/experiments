@@ -5,7 +5,7 @@ import './Item.css';
 import Button from '../Button/Button';
 
 const Item = props => (
-    <div className="item">
+    <div className="item" data-id={props.id}>
         <h3 className="item__description">
             {props.description}
         </h3>
