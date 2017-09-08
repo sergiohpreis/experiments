@@ -2,8 +2,8 @@ import React from 'react';
 
 import './App.css';
 
-import Input from '../components/Input/Input';
 import List from '../components/List/List';
+import Form from '../components/Form/Form';
 
 const data = [{
     description: 'Leite Longa Vida',
@@ -26,8 +26,8 @@ const remove = () => {
 
 const App = props => (
     <div className="App">
-        <Input title="Item" placeholder="Escreva o nome do item"/>
-        <List title="Supermarket List" data={data} handleAdd={add} handleRemove={remove}/>
+        <Form title="Supermarket List" />
+        <List data={data} handleAdd={add} handleRemove={remove}/>
     </div>
 );
 
