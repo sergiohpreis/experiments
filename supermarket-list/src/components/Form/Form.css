@@ -28,3 +28,13 @@
 .form__container--qtd {
     width: 20%;
 }
+
+.form__button {
+    clear: both;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.form__button .button {
+    width: 400px;
+}

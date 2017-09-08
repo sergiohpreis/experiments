@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Item.css';
 
-import Icon from '../Icon/Icon';
+import Button from '../Button/Button';
 
 const Item = props => (
     <div className="item">
@@ -10,8 +10,8 @@ const Item = props => (
             {props.description}
         </h3>
         <div className="item__actions">
-            <Icon type="add" text="Add" onClick={props.handleAdd}/>
-            <Icon type="remove" text="Remove" onClick={props.handleRemove}/>
+            <Button type="add" text="Add" onClick={props.handleAdd}/>
+            <Button type="remove" text="Remove" onClick={props.handleRemove}/>
         </div>
     </div>
 );
