@@ -21,6 +21,13 @@ class SuperMarketList extends Component {
         this.handleQtd = this.handleQtd.bind(this);
     };
 
+    cleanForm() {
+        this.setState({
+            description: '',
+            qtd: ''
+        });
+    };
+
     // Responsible for update the description
     handleDescription(e) {
         this.setState({
@@ -57,6 +64,8 @@ class SuperMarketList extends Component {
                 data: arr,
                 currentID: this.state.currentID + 1
             });
+
+            this.cleanForm();
         };
     };
 
