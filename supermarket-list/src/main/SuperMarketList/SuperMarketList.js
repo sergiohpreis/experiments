@@ -43,16 +43,20 @@ class SuperMarketList extends Component {
     // Responsible for include the item
     handleInclude() {
         let arr = this.state.data;
-        arr.push({
-            _id: this.state.currentID,
-            description: this.state.description,
-            qtd: this.state.qtd
-        });
         
-        this.setState({
-            data: arr,
-            currentID: this.state.currentID + 1
-        });
+        // Validate if the values are not empty
+        if (this.state.description !== '' && this.state.qtd !== '') {
+            arr.push({
+                _id: this.state.currentID,
+                description: this.state.description,
+                qtd: this.state.qtd
+            });
+            
+            this.setState({
+                data: arr,
+                currentID: this.state.currentID + 1
+            });
+        };
     };
 
     // Responsible for remove the item
