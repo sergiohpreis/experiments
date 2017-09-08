@@ -6,7 +6,6 @@ import './List.css';
 
 const List = props => (
     <div className="list">
-        <h3 className="list__title">{props.title}</h3>
         <ul className="list__items">
             {props.data.map((item, index) => <Item
                 key={index}
